@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<button onclick="ascending()">Ascending order</button>
+<button onclick="descending()">Descending order</button>
+<button onclick="muFunction1()">Try it</button>
+<p id="result"></p>
+<p id="product_value"></p>
+<p id="result1"></p>
+<script>
+	var points = [43.2,67.9,100.6,23.7,12.4,56.4];
+	document.getElementById('result').innerHTML = points;
+	function ascending(){
+		points.sort(function(a,b){return a-b});
+		document.getElementById('result').innerHTML = points;
+	}
+	function descending(){
+		points.sort(function(a,b){return b-a});
+		document.getElementById('result').innerHTML = points;}
+		var numbers = [28,6,19,95];
+		function myFunction(num){
+			return num * 10;
+		}
+		var newarray = numbers.map(myFunction);
+		document.getElementById("product_value").innerHTML = newarray;
+		function muFunction1(){
+			var x = 10;
+			var y = 20;
+			var a =eval("x + y") + "<br>";
+			var b =eval("2 * 2") + "<br>";
+			var c =eval("y - x") + "<br>";
+
+			var res = a + b +c;
+			document.getElementById("result1").innerHTML = res;
+		}
+</script>
+</body>
+</html>
